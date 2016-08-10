@@ -14,14 +14,31 @@ Laravel is accessible, yet powerful, providing tools needed for large, robust ap
 
 Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
 
-## Contributing
+# Laravel + Angular JS Test
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+Caliber requires a tool that helps measure the quality of websites for SEO purposes. This tool will be used on daily basis by internal and external staff.  
 
-## Security Vulnerabilities
+The tool requires the following metrics to be collected about the various domains:
+* Trust flow value [tf]
+* Citation flow value [cf]
+* CQS value [cqs]
+* External Backlinks [ebl]
+* Referring Domains [rd]
+* Related topics [ttf_*]
+* Social signals
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+The provided API call returns the required information in a structured JSON Object, in a single call. API credits are not infinite, so care should be taken to create efficiencies where possible.
 
-## License
+## Your Task
+Build a simple RESTfull web application based on the following requirements:
+* Laravel MVC framework should be used for the back-end, which should work as an RESTfull API;
+* Angular JS should be used for the front-end, which will make HTTP requests to the backend to fetch required data;
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+1. Clone our laravel-test repository from GitHub and use it as your starting point
+2. Build the project using composer
+3. Add new routes in the backend so it is able to respond to **localhost/api/v1/toolbar/domain.com** and return a JSON object using the [ToolbarController](https://github.com/caliberi/laravel-test/tree/master/app/Http/Controllers/ToolbarController.php) class. *we encourage you to use Laravel 5.* documentation to complete the task*
+4. Visualise the returned data in a meaningful way
+5. AngularJS must be used for the front-end. Please use [ngResource](https://docs.angularjs.org/api/ngResource/service/$resource) to fetch the data. **Do not use jQuery**
+
+The API KEY should be provided and should be recorded in the toolbar [config](https://github.com/caliberi/laravel-test/tree/master/config/toolbar.php) file.
+

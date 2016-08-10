@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html ng-app>
     <head>
-        <title>Laravel</title>
+        <title>Laravel + Angular JS</title>
 
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <script type="text/javascript" src="app/app.js"></script>
 
         <style>
             html, body {
@@ -38,7 +40,13 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Laravel 5</div>
+                <div class="title">Laravel 5 + AngularJS</div>
+            </div>
+            <div>
+              <label>Name:</label>
+              <input type="text" ng-model="yourName" placeholder="Enter a name here">
+              <hr>
+              <h1>Hello {{yourName}}!</h1>
             </div>
         </div>
     </body>
